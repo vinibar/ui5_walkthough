@@ -3,19 +3,24 @@ sap.ui.define([
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/model/resource/ResourceModel"
 ], function (UIComponent, JSONModel, ResourceModel) {
-
 	"use strict";
+
 	return UIComponent.extend("vinibar.walkthrough.Component", {
 
 		metadata: {
-			manifest: "json"
+			"rootView": {
+				"viewName": "vinibar.walkthrough.view.App",
+				"type": "XML",
+				"async": true,
+				"id": "app"
+			}
 		},
 
 		init: function () {
-
+			// call the init function of the parent
 			UIComponent.prototype.init.apply(this, arguments);
 
-			// set global data model
+			// set data model
 			var oData = {
 				recipient: {
 					name: "World"
@@ -31,4 +36,5 @@ sap.ui.define([
 			this.setModel(i18nModel, "i18n");
 		}
 	});
+
 });
