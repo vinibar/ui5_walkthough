@@ -6,17 +6,15 @@ sap.ui.define([
 
 	"use strict";
 	return UIComponent.extend("vinibar.walkthrough.Component", {
+
 		metadata: {
-			rootView: {
-				"viewName": "vinibar.walkthrough.view.App",
-				"type": "XML",
-				"async": true,
-				"id": "app"
-			}
+			manifest: "json"
 		},
+
 		init: function () {
 
 			UIComponent.prototype.init.apply(this, arguments);
+
 			// set global data model
 			var oData = {
 				recipient: {
