@@ -1,6 +1,10 @@
 sap.ui.define([
-
-], function () {
+	"sap/m/Text"
+], function (Text) {
 	"use strict";
-	alert("Hello, World!");
+
+	new Text({
+		text: "Hello, World"
+	}).placeAt("content");
+
 });
