@@ -1,4 +1,4 @@
 <mvc:View controllerName="vinibar.walkthrough.controller.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
-	<Button press=".onShowHello" text="Show Hello"/>
+	<Button press=".onShowHello" text="{i18n>showHelloButtonText}"/>
 	<Input value="{/recipient/name}" description="Hello, {/recipient/name}" valueLiveUpdate="true" width="60%"/>
 </mvc:View>
